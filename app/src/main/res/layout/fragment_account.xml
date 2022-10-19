@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.fragments.AccountFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".screens.ui.Account">
+
+            <!--  Account Summary  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="?actionBarSize">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/account_img" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:text="Ali El-Sayed"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_regular"
+                        android:text="alielsayedg@gmail.com"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <!--  Menu  -->
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_order_icon"
+                app:asb_label="Orders" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_my_details_icon"
+                app:asb_label="My Details" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_delivery_address"
+                app:asb_label="Delivery Address" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_vector_icon"
+                app:asb_label="Payment Methods" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_order_icon"
+                app:asb_label="Orders" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_promo_cord_icon"
+                app:asb_label="Promo Card" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_bell_icon"
+                app:asb_label="Notifications" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_help_icon"
+                app:asb_label="Help" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blurTxt" />
+
+            <com.example.finalprojectnectar.screens.components.AccountScreenBtn
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:asb_icon="@drawable/ic_about_icon"
+                app:asb_label="About" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="100dp"
+                    android:src="@drawable/ic_logout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:text="Log Out"
+                    android:textColor="@color/main"
+                    android:textFontWeight="600"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

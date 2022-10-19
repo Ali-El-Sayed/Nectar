@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/carrot.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_account.xml" value="0.1075" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_carrot.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_minus.xml" value="0.1075" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_shop.xml" value="0.1075" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/logo.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/rectangle_6.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/splash_logo.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_account.xml" value="0.2" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_home.xml" value="0.176" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.264" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_product_details.xml" value="0.2" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_product_details2.xml" value="0.166796875" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_sing_up.xml" value="0.2421875" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/explore_card.xml" value="0.4" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_account.xml" value="0.176" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_blank.xml" value="0.166796875" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_product_details.xml" value="0.176" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_shop.xml" value="0.166796875" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_sign_up.xml" value="0.166796875" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/product_card.xml" value="0.264" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/rectrange_6.xml" value="0.1987179487179487" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

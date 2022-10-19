@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.ui.OnBoarding">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/on_boarding" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/carrot" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/gilroy_regular"
+        android:text="Welcome \n to our store"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/textOnBoarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Get your groceries in as fast as one hour"
+        android:textAlignment="center"
+        android:textColor="@color/textSecondColor"
+        android:textSize="16sp" />
+
+    <com.example.finalprojectnectar.widgets.MainButton
+        android:id="@+id/btnGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOnBoarding"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Get Started"/>
+</RelativeLayout>
+

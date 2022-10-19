@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/imgProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_product_details_rec"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banana" />
+
+                <ImageView
+                    android:onClick="onBackPress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="?actionBarSize"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="?actionBarSize"
+                    android:layout_marginRight="25dp"
+                    android:src="@drawable/ic_share" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="Naturel Red Apple"
+                    android:textColor="@color/accountTxtColor"
+                    android:textFontWeight="600"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_favourite"
+                    app:tint="@color/blurTxt" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="1kg, Price"
+                android:textColor="@color/blurTxt"
+                android:textFontWeight="600"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="50dp"
+                    android:onClick="onDecrease"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_minus"
+                        app:tint="@color/blurTxt" />
+
+                    <TextView
+                        android:id="@+id/txtCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_count_rec"
+                        android:fontFamily="@font/gilroy_regular"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:onClick="onIncrease"
+                        android:layout_marginEnd="20dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_add"
+                        app:tint="@color/main" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="$4.99"
+                    android:textColor="@color/accountTxtColor"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <!--Line Break-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="25dp"
+                android:background="@color/blurTxt" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:text="Product Details"
+                    android:textColor="@color/accountTxtColor"
+                    android:textFontWeight="600"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btnExpand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_down"
+                    app:tint="@color/accountTxtColor" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+                android:textSize="13sp" />
+
+            <!--Line Break-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blurTxt" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:text="Nutritions"
+                    android:textColor="@color/accountTxtColor"
+                    android:textFontWeight="600"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_count_rec"
+                        android:fontFamily="@font/gilroy_regular"
+                        android:gravity="center"
+                        android:text="100gr"
+                        android:textSize="12sp" />
+
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_arrow_forward"
+                        app:tint="@color/accountTxtColor" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--Line Break-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blurTxt" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:text="Review"
+                    android:textColor="@color/accountTxtColor"
+                    android:textFontWeight="600"
+                    android:textSize="16sp" />
+
+                <RatingBar
+                    android:id="@+id/rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:numStars="5"
+                    android:progressTint="#FF923E"
+                    android:rating="4.5"
+                    android:scaleX=".5"
+                    android:scaleY=".5" />
+            </RelativeLayout>
+
+            <com.example.finalprojectnectar.widgets.MainButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="Add To Basket" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
