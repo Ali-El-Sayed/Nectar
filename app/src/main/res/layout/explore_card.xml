@@ -8,31 +8,32 @@
     <LinearLayout
         android:layout_width="174.5dp"
         android:layout_height="180dp"
+        android:gravity="center_horizontal"
         android:background="@drawable/ic_card_rec"
         android:orientation="vertical"
         android:paddingHorizontal="10dp">
 
         <ImageView
-            android:id="@+id/imgProduct"
+            android:id="@+id/imgCategory"
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:backgroundTint="@android:color/transparent"
             android:scaleType="centerCrop"
-            android:src="@drawable/banana" />
+            android:src="@drawable/electronics" />
 
 
         <TextView
-            android:id="@+id/txtProductTitle"
-            android:layout_width="124dp"
+            android:id="@+id/txtCategoryTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:maxLines="2"
             android:layout_marginTop="20dp"
+            android:textAlignment="center"
             android:fontFamily="@font/gilroy_bold"
-            android:maxLength="14"
-            android:textColor="@color/accountTxtColor"
             android:text="Organic Bananas"
+            android:textColor="@color/accountTxtColor"
             android:textSize="16sp" />
 
 

@@ -5,5 +5,5 @@ import android.view.View;
 import com.example.finalprojectnectar.data.model.Product;
 
 public interface IOnClick {
-    void onClick(Product product);
+    void onProductClick(Product product);
 }

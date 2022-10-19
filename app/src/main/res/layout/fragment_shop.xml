@@ -164,6 +164,7 @@
             android:id="@+id/productList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="?actionBarSize"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
             tools:listitem="@layout/product_card" />

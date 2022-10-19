@@ -8,15 +8,14 @@ import com.example.finalprojectnectar.reprository.Repository;
 
 import java.util.ArrayList;
 
-public class ProductViewModel extends ViewModel {
-
+public class CategoriesViewModel extends ViewModel {
     private final Repository mRepository = new Repository();
 
-    public void getProductsFromRepo() {
-        mRepository.getProductsFromServer();
+    public void getCategoriesFromRepo() {
+        mRepository.getCategoriesFromServer();
     }
 
-    public LiveData<ArrayList<Product>> getProducts() {
-        return mRepository.getProducts();
+    public LiveData<ArrayList<String>> getCategories() {
+        return mRepository.getCategories();
     }
 }

@@ -49,6 +49,7 @@ public class ShopFragment extends Fragment implements IOnClick {
         mRecyclerView = view.findViewById(R.id.productList);
         mProgressBar = view.findViewById(R.id.progressBar);
         mHomeCustomAdapter = new HomeCustomAdapter(this);
+
         mProductViewModel = new ViewModelProvider(this).get(ProductViewModel.class);
         mProductViewModel.getProductsFromRepo();
         mProductViewModel.getProducts().observe(getActivity(), new Observer<ArrayList<Product>>() {
@@ -73,13 +74,12 @@ public class ShopFragment extends Fragment implements IOnClick {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                newResult.clear();
                 for (Product p : result) {
-                    if (p.getTitle().toLowerCase().contains(newText.toLowerCase()))
+                    if (p.getTitle().toLowerCase().trim().contains(newText.toLowerCase().trim()))
                         newResult.add(p);
-
-                    HomeCustomAdapter homeCustomAdapter = new HomeCustomAdapter(ShopFragment.this);
-                    homeCustomAdapter.setProducts(newResult);
-                    mRecyclerView.setAdapter(homeCustomAdapter);
+                    mHomeCustomAdapter.setProducts(newResult);
+                    mRecyclerView.setAdapter(mHomeCustomAdapter);
 //                    Log.d("SearchView", "onQueryTextChange: " + newResult.get(0).getTitle());
                 }
                 return true;
@@ -90,7 +90,7 @@ public class ShopFragment extends Fragment implements IOnClick {
     }
 
     @Override
-    public void onClick(Product product) {
+    public void onProductClick(Product product) {
         Intent bundle = new Intent(getActivity(), ProductDetails.class);
         bundle.putExtra("name", product.getTitle());
         bundle.putExtra("description", product.getDescription());

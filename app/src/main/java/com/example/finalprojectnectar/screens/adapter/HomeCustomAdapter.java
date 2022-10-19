@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,7 +42,7 @@ public class HomeCustomAdapter extends RecyclerView.Adapter<HomeCustomAdapter.Da
         holder.imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mIOnClick.onClick(products.get(position));
+                mIOnClick.onProductClick(products.get(position));
             }
         });
 

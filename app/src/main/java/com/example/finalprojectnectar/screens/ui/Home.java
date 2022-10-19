@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -21,22 +20,21 @@ import java.util.ArrayList;
 
 public class Home extends AppCompatActivity implements IOnClick {
 
-    private ProductViewModel mProductViewModel;
     private HomeCustomAdapter mHomeCustomAdapter;
     private RecyclerView mRecyclerView;
-    private SearchView mSearchView;
     private ArrayList<Product> result = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        mSearchView = findViewById(R.id.searchView);
+        SearchView searchView = findViewById(R.id.searchView);
         mRecyclerView = findViewById(R.id.productList);
         mHomeCustomAdapter = new HomeCustomAdapter(this);
-        mProductViewModel = new ViewModelProvider(this).get(ProductViewModel.class);
-        mProductViewModel.getProductsFromRepo();
-        mProductViewModel.getProducts().observe(this, new Observer<ArrayList<Product>>() {
+
+        ProductViewModel productViewModel = new ViewModelProvider(this).get(ProductViewModel.class);
+        productViewModel.getProductsFromRepo();
+        productViewModel.getProducts().observe(this, new Observer<ArrayList<Product>>() {
             @Override
             public void onChanged(ArrayList<Product> products) {
                 mHomeCustomAdapter.setProducts(products);
@@ -47,8 +45,8 @@ public class Home extends AppCompatActivity implements IOnClick {
         mRecyclerView.setAdapter(mHomeCustomAdapter);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
-        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            ArrayList<Product> newResult = new ArrayList<>();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            final ArrayList<Product> newResult = new ArrayList<>();
 
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -64,7 +62,6 @@ public class Home extends AppCompatActivity implements IOnClick {
                     HomeCustomAdapter homeCustomAdapter = new HomeCustomAdapter(Home.this);
                     homeCustomAdapter.setProducts(newResult);
                     mRecyclerView.setAdapter(homeCustomAdapter);
-//                    Log.d("SearchView", "onQueryTextChange: " + newResult.get(0).getTitle());
                 }
                 return true;
 
@@ -74,7 +71,7 @@ public class Home extends AppCompatActivity implements IOnClick {
     }
 
     @Override
-    public void onClick(Product product) {
+    public void onProductClick(Product product) {
         Toast.makeText(this, product.getTitle(), Toast.LENGTH_SHORT).show();
     }
 }

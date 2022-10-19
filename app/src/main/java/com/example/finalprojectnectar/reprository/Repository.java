@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.finalprojectnectar.data.model.Product;
+import com.example.finalprojectnectar.data.network.categories.CategoriesClient;
 import com.example.finalprojectnectar.data.network.product.ProductClient;
 
 import java.util.ArrayList;
@@ -18,6 +19,9 @@ public class Repository {
 
 
     private final MutableLiveData<ArrayList<Product>> products = new MutableLiveData<>();
+
+
+    private final MutableLiveData<ArrayList<String>> categories = new MutableLiveData<>();
 
     public void getProductsFromServer() {
         ProductClient.getInstance().getProducts().enqueue(new Callback<ArrayList<Product>>() {
@@ -39,7 +43,31 @@ public class Repository {
         });
     }
 
+    public void getCategoriesFromServer() {
+        CategoriesClient.getInstance().getCategories().enqueue(new Callback<ArrayList<String>>() {
+            @Override
+            public void onResponse(Call<ArrayList<String>> call, Response<ArrayList<String>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    categories.setValue(response.body());
+                    Log.d("ExploreScreenData", "onResponse: " + response.body());
+                }
+                Log.d("ExploreScreenData", "onResponse: " + response.body());
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<String>> call, Throwable t) {
+                Log.d("ExploreScreenData", "onResponse: " + t.getMessage());
+
+            }
+        });
+    }
+
+
     public MutableLiveData<ArrayList<Product>> getProducts() {
         return products;
+    }
+
+    public MutableLiveData<ArrayList<String>> getCategories() {
+        return categories;
     }
 }
