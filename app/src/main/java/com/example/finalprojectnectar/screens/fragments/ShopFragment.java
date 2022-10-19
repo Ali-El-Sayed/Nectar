@@ -19,12 +19,12 @@ import com.example.finalprojectnectar.R;
 import com.example.finalprojectnectar.data.model.Product;
 import com.example.finalprojectnectar.data.viewmodel.ProductViewModel;
 import com.example.finalprojectnectar.screens.adapter.HomeCustomAdapter;
-import com.example.finalprojectnectar.screens.adapter.IOnClick;
+import com.example.finalprojectnectar.screens.adapter.IOnProductClick;
 import com.example.finalprojectnectar.screens.ui.ProductDetails;
 
 import java.util.ArrayList;
 
-public class ShopFragment extends Fragment implements IOnClick {
+public class ShopFragment extends Fragment implements IOnProductClick {
     private ProductViewModel mProductViewModel;
     private HomeCustomAdapter mHomeCustomAdapter;
     private RecyclerView mRecyclerView;

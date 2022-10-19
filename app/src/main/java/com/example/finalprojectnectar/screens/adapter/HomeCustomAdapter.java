@@ -21,9 +21,9 @@ public class HomeCustomAdapter extends RecyclerView.Adapter<HomeCustomAdapter.Da
 
 
     private ArrayList<Product> products = new ArrayList<>();
-    private IOnClick mIOnClick;
+    private IOnProductClick mIOnClick;
 
-    public HomeCustomAdapter(IOnClick IOnClick) {
+    public HomeCustomAdapter(IOnProductClick IOnClick) {
         this.mIOnClick = IOnClick;
     }
 

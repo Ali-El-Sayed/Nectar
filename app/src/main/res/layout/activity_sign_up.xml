@@ -72,6 +72,7 @@
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/etxUsername"
                     android:layout_width="364.12dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_medium"
@@ -97,6 +98,7 @@
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/etxEmail"
                     android:layout_width="364.12dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_medium"
@@ -123,6 +125,7 @@
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/etxPassword"
                     android:layout_width="364.12dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gilroy_medium"
@@ -194,6 +197,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <com.example.finalprojectnectar.widgets.MainButton
+                    android:id="@+id/btnSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

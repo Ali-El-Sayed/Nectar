@@ -4,6 +4,6 @@ import android.view.View;
 
 import com.example.finalprojectnectar.data.model.Product;
 
-public interface IOnClick {
+public interface IOnProductClick {
     void onProductClick(Product product);
 }

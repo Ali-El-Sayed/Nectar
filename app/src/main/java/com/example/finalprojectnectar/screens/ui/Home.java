@@ -14,11 +14,11 @@ import com.example.finalprojectnectar.R;
 import com.example.finalprojectnectar.data.model.Product;
 import com.example.finalprojectnectar.data.viewmodel.ProductViewModel;
 import com.example.finalprojectnectar.screens.adapter.HomeCustomAdapter;
-import com.example.finalprojectnectar.screens.adapter.IOnClick;
+import com.example.finalprojectnectar.screens.adapter.IOnProductClick;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity implements IOnClick {
+public class Home extends AppCompatActivity implements IOnProductClick {
 
     private HomeCustomAdapter mHomeCustomAdapter;
     private RecyclerView mRecyclerView;

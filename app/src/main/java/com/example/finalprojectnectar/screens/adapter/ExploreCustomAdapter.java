@@ -18,6 +18,7 @@ public class ExploreCustomAdapter extends RecyclerView.Adapter<ExploreCustomAdap
 
     ArrayList<String> categories = new ArrayList<>();
     HashMap<String, Integer> imgs = new HashMap<>();
+    IOnCategoryClick mIOnCategoryClick;
 
     @NonNull
     @Override
@@ -34,6 +35,12 @@ public class ExploreCustomAdapter extends RecyclerView.Adapter<ExploreCustomAdap
         String title = categories.get(position);
         holder.txtCategories.setText(title);
         holder.imgCategories.setImageResource(imgs.get(title));
+        holder.imgCategories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIOnCategoryClick.onCategoryClick(title);
+            }
+        });
     }
 
     @Override
