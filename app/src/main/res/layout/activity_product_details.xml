@@ -29,11 +29,11 @@
                     android:src="@drawable/banana" />
 
                 <ImageView
-                    android:onClick="onBackPress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="?actionBarSize"
+                    android:onClick="onBackPress"
                     android:src="@drawable/ic_arrow_back" />
 
                 <ImageView
@@ -63,6 +63,7 @@
                     android:textSize="24sp" />
 
                 <ImageView
+                    android:id="@+id/btnAddToFav"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -91,8 +92,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="50dp"
-                    android:onClick="onDecrease"
                     android:gravity="center_vertical"
+                    android:onClick="onDecrease"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -118,9 +119,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:onClick="onIncrease"
                         android:layout_marginEnd="20dp"
                         android:background="@android:color/transparent"
+                        android:onClick="onIncrease"
                         android:src="@drawable/ic_add"
                         app:tint="@color/main" />
                 </LinearLayout>
@@ -173,9 +174,9 @@
                 android:id="@+id/txtDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
                 android:layout_marginHorizontal="30dp"
                 android:fontFamily="@font/gilroy_medium"
+                android:maxLines="2"
                 android:text="Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
                 android:textSize="13sp" />
 

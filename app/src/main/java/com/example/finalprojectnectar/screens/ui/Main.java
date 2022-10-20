@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.finalprojectnectar.R;
 import com.example.finalprojectnectar.screens.fragments.AccountFragment;
 import com.example.finalprojectnectar.screens.fragments.ExploreFragment;
+import com.example.finalprojectnectar.screens.fragments.FavouriteFragment;
 import com.example.finalprojectnectar.screens.fragments.ShopFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -45,7 +46,7 @@ public class Main extends AppCompatActivity {
                         break;
 
                     case R.id.favMenu:
-                        Toast.makeText(Main.this, "Favourite", Toast.LENGTH_SHORT).show();
+                        replaceFragment(new FavouriteFragment());
                         break;
 
                     case R.id.accMenu:

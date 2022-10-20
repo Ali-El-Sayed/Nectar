@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class SignUp extends AppCompatActivity {
     TextView txtLogIn;
     Button btnSignUp;
     EditText mUsername, mEmail, mPassword;
+    ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class SignUp extends AppCompatActivity {
         mEmail = findViewById(R.id.etxEmail);
         mPassword = findViewById(R.id.etxPassword);
         btnSignUp = findViewById(R.id.btnSignUp);
+        mProgressBar = findViewById(R.id.progressBar);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,11 +44,13 @@ public class SignUp extends AppCompatActivity {
                         mPassword.getText().toString().isEmpty())
                     Toast.makeText(SignUp.this, "Check your Information", Toast.LENGTH_SHORT).show();
                 else {
+                    mProgressBar.setVisibility(View.VISIBLE);
                     UserClient.getInstance().signUp(mUsername.getText().toString(),
                             mEmail.getText().toString(),
                             mPassword.getText().toString()).enqueue(new Callback<UserResponseModel>() {
                         @Override
                         public void onResponse(Call<UserResponseModel> call, Response<UserResponseModel> response) {
+                            mProgressBar.setVisibility(View.GONE);
                             if (response.isSuccessful()) {
                                 if (response.body().getResponse().equals("هذا البريد مسجل من قبل"))
                                     Toast.makeText(SignUp.this, response.body().getResponse(), Toast.LENGTH_SHORT).show();
@@ -61,6 +66,7 @@ public class SignUp extends AppCompatActivity {
 
                         @Override
                         public void onFailure(Call<UserResponseModel> call, Throwable t) {
+                            mProgressBar.setVisibility(View.GONE);
                             Toast.makeText(SignUp.this, "Try Again", Toast.LENGTH_SHORT).show();
 
                         }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.finalprojectnectar" >
+    package="com.example.finalprojectnectar">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,28 +14,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nectar"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
             android:name=".screens.ui.ProductDetails"
-            android:exported="false" />
-        <activity
-            android:name=".screens.ui.Home"
             android:exported="false" />
         <activity
             android:name=".screens.ui.Splash"
             android:exported="false" />
         <activity
-            android:name=".screens.ui.Main"
+            android:name=".screens.ui.SignUp"
             android:exported="false" />
         <activity
-            android:name=".screens.ui.LogIn"
+            android:name=".screens.ui.Main"
             android:exported="false" />
         <activity
             android:name=".screens.ui.OnBoarding"
             android:exported="false" />
         <activity
-            android:name=".screens.ui.SignUp"
-            android:exported="true" >
+            android:name=".screens.ui.LogIn"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

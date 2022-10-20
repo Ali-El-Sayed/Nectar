@@ -14,20 +14,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.example.finalprojectnectar.R;
 import com.example.finalprojectnectar.data.model.Product;
 import com.example.finalprojectnectar.data.viewmodel.CategoriesViewModel;
 import com.example.finalprojectnectar.data.viewmodel.ProductViewModel;
 import com.example.finalprojectnectar.screens.adapter.ExploreCustomAdapter;
+import com.example.finalprojectnectar.screens.adapter.IOnCategoryClick;
 
 import java.util.ArrayList;
 
 
-public class ExploreFragment extends Fragment {
+public class ExploreFragment extends Fragment implements IOnCategoryClick {
     private ProgressBar mProgressBar;
     private RecyclerView recyclerView;
-    private final ExploreCustomAdapter exploreCustomAdapter = new ExploreCustomAdapter();
+    private final ExploreCustomAdapter exploreCustomAdapter = new ExploreCustomAdapter(this);
     private ArrayList<String> result = new ArrayList<>();
 
     @Override
@@ -45,6 +47,7 @@ public class ExploreFragment extends Fragment {
         SearchView searchView = view.findViewById(R.id.searchView);
         recyclerView = view.findViewById(R.id.categoryList);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+
         CategoriesViewModel categoriesViewModel = new ViewModelProvider(this).get(CategoriesViewModel.class);
         categoriesViewModel.getCategoriesFromRepo();
         categoriesViewModel.getCategories().observe(getActivity(), new Observer<ArrayList<String>>() {
@@ -82,5 +85,10 @@ public class ExploreFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return view;
+    }
+
+    @Override
+    public void onCategoryClick(String name) {
+        Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
     }
 }

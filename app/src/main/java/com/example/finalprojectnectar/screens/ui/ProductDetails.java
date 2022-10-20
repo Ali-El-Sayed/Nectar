@@ -4,17 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.finalprojectnectar.R;
+import com.example.finalprojectnectar.data.database.FavDb;
+import com.example.finalprojectnectar.data.database.FavouriteDb;
 import com.squareup.picasso.Picasso;
 
 public class ProductDetails extends AppCompatActivity {
     private TextView txtName, txtDescription, txtPrice, txtCount;
-    private ImageView imgProduct, btnExpand;
+    private ImageView imgProduct, btnExpand, btnAddToFav;
     private RatingBar mRatingBar;
     private int count;
 
@@ -29,7 +31,18 @@ public class ProductDetails extends AppCompatActivity {
         txtCount = findViewById(R.id.txtCount);
         imgProduct = findViewById(R.id.imgProduct);
         mRatingBar = findViewById(R.id.rate);
+        btnAddToFav = findViewById(R.id.btnAddToFav);
         btnExpand = findViewById(R.id.btnExpand);
+
+        //Intent Extras
+        Bundle bundle = getIntent().getExtras();
+        String name = bundle.getString("name");
+        String description = bundle.getString("description");
+        String img = bundle.getString("img");
+        count = bundle.getInt("count");
+        double price = bundle.getDouble("price");
+        double rate = bundle.getDouble("rate");
+
         btnExpand.setOnClickListener(new View.OnClickListener() {
             boolean expanded = false;
 
@@ -46,15 +59,26 @@ public class ProductDetails extends AppCompatActivity {
                 }
             }
         });
+        btnAddToFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        FavouriteDb.getInstance(ProductDetails.this).Dao()
+                                .insert(new FavDb(null, name, (int) price, img));
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(ProductDetails.this, "Added To Favourite", Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
+                    }
+                }).start();
+            }
+        });
 
-        Bundle bundle = getIntent().getExtras();
-        String name = bundle.getString("name");
-        String description = bundle.getString("description");
-        String img = bundle.getString("img");
-        count = bundle.getInt("count");
-        double price = bundle.getDouble("price");
-        double rate = bundle.getDouble("rate");
 
         txtName.setText(name);
         txtDescription.setText(description);

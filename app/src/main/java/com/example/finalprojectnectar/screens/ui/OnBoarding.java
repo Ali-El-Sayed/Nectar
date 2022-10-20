@@ -19,7 +19,7 @@ public class OnBoarding extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(OnBoarding.this, SignUp.class));
+                startActivity(new Intent(OnBoarding.this, LogIn.class));
                 finish();
             }
         });
