@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.finalprojectnectar.R;
 import com.example.finalprojectnectar.data.database.CartDatabase;
@@ -45,7 +46,7 @@ public class CartFragment extends Fragment {
         View view = inflater.inflate(R.layout.cart_fragment, container, false);
         CartCustomAdapter cartCustomAdapter = new CartCustomAdapter();
         ProgressBar progressBar = view.findViewById(R.id.progressBar);
-        View btnAddToCart = view.findViewById(R.id.btnCheckOut);
+        View btnCheckOut = view.findViewById(R.id.btnCheckOut);
         TextView txtTotal = view.findViewById(R.id.txtTotal);
         CartViewModel cartViewModel = new ViewModelProvider(this).get(CartViewModel.class);
 
@@ -68,6 +69,25 @@ public class CartFragment extends Fragment {
                 progressBar.setVisibility(View.GONE);
             }
         });
+
+        btnCheckOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        CartDatabase.getInstance(getActivity()).Dao().deleteAllProducts();
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getActivity(), "Cart Cleared", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }).start();
+            }
+        });
+
         // Inflate the layout for this fragment
         return view;
     }

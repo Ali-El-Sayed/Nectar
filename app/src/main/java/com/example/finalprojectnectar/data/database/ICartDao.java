@@ -19,4 +19,8 @@ public interface ICartDao {
 
     @Query("DELETE FROM cart_table WHERE id = :id")
     void deleteById(long id);
+
+    @Query("DELETE FROM cart_table")
+    void deleteAllProducts();
+
 }

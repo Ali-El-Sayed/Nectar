@@ -19,7 +19,7 @@
             android:name=".screens.ui.ProductDetails"
             android:exported="false" />
         <activity
-            android:name=".screens.ui.Splash"
+            android:name=".screens.ui.LogIn"
             android:exported="false" />
         <activity
             android:name=".screens.ui.SignUp"
@@ -29,10 +29,12 @@
             android:exported="false" />
         <activity
             android:name=".screens.ui.OnBoarding"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.splash" />
         <activity
-            android:name=".screens.ui.LogIn"
-            android:exported="true">
+            android:name=".screens.ui.Splash"
+            android:exported="true"
+            android:theme="@style/Theme.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -45,6 +45,12 @@ public class HomeCustomAdapter extends RecyclerView.Adapter<HomeCustomAdapter.Da
                 mIOnClick.onProductClick(products.get(position));
             }
         });
+        holder.btnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIOnClick.onAddToCartClick(products.get(position));
+            }
+        });
 
     }
 

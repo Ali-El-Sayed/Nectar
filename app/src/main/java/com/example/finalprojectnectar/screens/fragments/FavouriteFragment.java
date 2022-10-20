@@ -72,7 +72,7 @@ public class FavouriteFragment extends Fragment {
         favouriteCustomAdapter.setProducts(new ArrayList<>());
         RecyclerView recyclerView = view.findViewById(R.id.favList);
         progressBar.setVisibility(View.VISIBLE);
-//     
+//
         favViewModel.getProducts().observe(getActivity(), new Observer<List<FavDb>>() {
             @Override
             public void onChanged(List<FavDb> favDbs) {

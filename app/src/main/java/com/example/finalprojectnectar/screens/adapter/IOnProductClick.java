@@ -6,4 +6,6 @@ import com.example.finalprojectnectar.data.model.Product;
 
 public interface IOnProductClick {
     void onProductClick(Product product);
+
+    void onAddToCartClick(Product product);
 }

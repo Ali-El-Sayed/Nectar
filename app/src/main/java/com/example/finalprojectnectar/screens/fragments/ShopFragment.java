@@ -14,8 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.example.finalprojectnectar.R;
+import com.example.finalprojectnectar.data.database.CartDatabase;
+import com.example.finalprojectnectar.data.database.CartDbModel;
 import com.example.finalprojectnectar.data.model.Product;
 import com.example.finalprojectnectar.data.viewmodel.ProductViewModel;
 import com.example.finalprojectnectar.screens.adapter.HomeCustomAdapter;
@@ -100,5 +103,26 @@ public class ShopFragment extends Fragment implements IOnProductClick {
         bundle.putExtra("rate", product.getRating().getRate());
         bundle.putExtra("id", product.getId());
         startActivity(bundle);
+    }
+
+    @Override
+    public void onAddToCartClick(Product product) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                CartDatabase.getInstance(getActivity()).Dao().insert(
+                        new CartDbModel(null,
+                                product.getTitle(),
+                                product.getPrice(),
+                                product.getRating().getCount(),
+                                product.getImage()));
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getActivity(),"Added To Cart", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }).start();
     }
 }
