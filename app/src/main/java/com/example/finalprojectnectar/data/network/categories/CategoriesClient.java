@@ -1,7 +1,10 @@
 package com.example.finalprojectnectar.data.network.categories;
 
+import com.example.finalprojectnectar.data.model.Product;
+
 import java.util.ArrayList;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -14,7 +17,8 @@ public class CategoriesClient {
     private CategoriesClient() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create()).build();
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(new OkHttpClient()).build();
         mICategories = retrofit.create(ICategories.class);
     }
 
@@ -28,6 +32,10 @@ public class CategoriesClient {
     //Get All Products
     public Call<ArrayList<String>> getCategories() {
         return mICategories.getCategories();
+    }
+
+    public Call<ArrayList<Product>> getProductsByCategory(String category) {
+        return mICategories.getProductsByCategory(category);
     }
 
 }

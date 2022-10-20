@@ -6,7 +6,9 @@
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/carrot.xml" value="0.121" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_account.xml" value="0.1075" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_blur_background.xml" value="0.108" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_carrot.xml" value="0.121" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_cart_price_frame.xml" value="0.108" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_minus.xml" value="0.1075" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/ic_shop.xml" value="0.1075" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/drawable/logo.xml" value="0.121" />
@@ -22,10 +24,13 @@
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_sing_up.xml" value="0.2421875" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/cart_fragment.xml" value="0.176" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/cart_item_card.xml" value="0.2" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/explore_card.xml" value="0.4" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/favourite_card.xml" value="0.2" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_account.xml" value="0.176" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_blank.xml" value="0.166796875" />
+        <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_cart.xml" value="0.264" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_favourite.xml" value="0.162890625" />
         <entry key="..\:/Orange AMIT/FinalProject-Nectar/app/src/main/res/layout/fragment_product_details.xml" value="0.176" />

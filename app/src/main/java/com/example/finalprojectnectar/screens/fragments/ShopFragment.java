@@ -98,6 +98,7 @@ public class ShopFragment extends Fragment implements IOnProductClick {
         bundle.putExtra("count", product.getRating().getCount());
         bundle.putExtra("price", product.getPrice());
         bundle.putExtra("rate", product.getRating().getRate());
+        bundle.putExtra("id", product.getId());
         startActivity(bundle);
     }
 }

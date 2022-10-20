@@ -16,6 +16,7 @@ public class ProductViewModel extends ViewModel {
         mRepository.getProductsFromServer();
     }
 
+
     public LiveData<ArrayList<Product>> getProducts() {
         return mRepository.getProducts();
     }

@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.finalprojectnectar.R;
 import com.example.finalprojectnectar.screens.fragments.AccountFragment;
+import com.example.finalprojectnectar.screens.fragments.CartFragment;
 import com.example.finalprojectnectar.screens.fragments.ExploreFragment;
 import com.example.finalprojectnectar.screens.fragments.FavouriteFragment;
 import com.example.finalprojectnectar.screens.fragments.ShopFragment;
@@ -41,8 +42,7 @@ public class Main extends AppCompatActivity {
                         break;
 
                     case R.id.cartMenu:
-
-                        Toast.makeText(Main.this, "Cart", Toast.LENGTH_SHORT).show();
+                        replaceFragment(new CartFragment());
                         break;
 
                     case R.id.favMenu:

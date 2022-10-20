@@ -93,7 +93,6 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="50dp"
                     android:gravity="center_vertical"
-                    android:onClick="onDecrease"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -101,6 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="20dp"
                         android:background="@android:color/transparent"
+                        android:onClick="onDecrease"
                         android:src="@drawable/ic_minus"
                         app:tint="@color/blurTxt" />
 
@@ -271,6 +271,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/btnAddToCart"
                 android:layout_marginTop="15dp"
                 android:text="Add To Basket" />
         </LinearLayout>

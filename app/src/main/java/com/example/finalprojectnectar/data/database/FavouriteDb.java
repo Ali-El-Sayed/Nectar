@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.finalprojectnectar.data.model.Product;
 
-@Database(entities = {FavDb.class}, version = 1)
+@Database(entities = {FavDb.class}, version = 2)
 public abstract class FavouriteDb extends RoomDatabase {
     private static FavouriteDb INSTANCE;
     public abstract IFavouriteDAO Dao();

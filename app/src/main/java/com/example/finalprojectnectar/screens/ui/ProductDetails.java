@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalprojectnectar.R;
+import com.example.finalprojectnectar.data.database.CartDatabase;
+import com.example.finalprojectnectar.data.database.CartDbModel;
 import com.example.finalprojectnectar.data.database.FavDb;
 import com.example.finalprojectnectar.data.database.FavouriteDb;
 import com.squareup.picasso.Picasso;
@@ -18,6 +21,7 @@ public class ProductDetails extends AppCompatActivity {
     private TextView txtName, txtDescription, txtPrice, txtCount;
     private ImageView imgProduct, btnExpand, btnAddToFav;
     private RatingBar mRatingBar;
+    Button btnAddToCart;
     private int count;
 
 
@@ -33,6 +37,7 @@ public class ProductDetails extends AppCompatActivity {
         mRatingBar = findViewById(R.id.rate);
         btnAddToFav = findViewById(R.id.btnAddToFav);
         btnExpand = findViewById(R.id.btnExpand);
+        btnAddToCart = findViewById(R.id.btnAddToCart);
 
         //Intent Extras
         Bundle bundle = getIntent().getExtras();
@@ -43,6 +48,25 @@ public class ProductDetails extends AppCompatActivity {
         double price = bundle.getDouble("price");
         double rate = bundle.getDouble("rate");
 
+        btnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        CartDatabase.getInstance(ProductDetails.this).Dao().insert(
+                                new CartDbModel(null, name, price, count, img)
+                        );
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(ProductDetails.this, "Added To Cart", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }).start();
+            }
+        });
         btnExpand.setOnClickListener(new View.OnClickListener() {
             boolean expanded = false;
 
@@ -66,7 +90,7 @@ public class ProductDetails extends AppCompatActivity {
                     @Override
                     public void run() {
                         FavouriteDb.getInstance(ProductDetails.this).Dao()
-                                .insert(new FavDb(null, name, (int) price, img));
+                                .insert(new FavDb(null, name, (int) price, count, img));
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

@@ -16,4 +16,7 @@ public interface IFavouriteDAO {
     @Query("SELECT * FROM fav_table")
     LiveData<List<FavDb>> getAllProducts();
 
+    @Query("DELETE FROM fav_table")
+    void deleteAllProducts();
+
 }
