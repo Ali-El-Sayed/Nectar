@@ -1,7 +1,6 @@
 # Nectar
 
-![splash Screen](https://user-images.githubusercontent.com/63204358/196873538-6dc42d6e-3145-40da-abd5-cbd2701d87ba.png)
-![onbording](https://user-images.githubusercontent.com/63204358/196873738-ede01d33-dc4f-4f60-8c9c-0be19591c3c0.png)
+![splash Screen](https://user-images.githubusercontent.com/63204358/196873538-6dc42d6e-3145-40da-abd5-cbd2701d87ba.png) ![onbording](https://user-images.githubusercontent.com/63204358/196873738-ede01d33-dc4f-4f60-8c9c-0be19591c3c0.png)
 ![log in](https://user-images.githubusercontent.com/63204358/196873676-e8d085d3-222f-4049-826b-1c4a97505eab.png)
 ![sign up](https://user-images.githubusercontent.com/63204358/196873681-6f828336-98f1-4d6f-8b37-1101d6a1599d.png)
 ![Search](https://user-images.githubusercontent.com/63204358/196873870-5fd186ca-05ee-47f7-a879-3499f1eaa30e.png)
