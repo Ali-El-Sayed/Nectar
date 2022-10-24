@@ -1,16 +1,16 @@
 # Nectar
 
-![splash Screen](https://user-images.githubusercontent.com/63204358/196873538-6dc42d6e-3145-40da-abd5-cbd2701d87ba.png)![onbording](https://user-images.githubusercontent.com/63204358/196873738-ede01d33-dc4f-4f60-8c9c-0be19591c3c0.png)
+![splash Screen](https://user-images.githubusercontent.com/63204358/197622501-531a2396-259b-4729-ad32-076edfddcb92.png) ![onbording](https://user-images.githubusercontent.com/63204358/197622488-e689a224-cab1-4ab3-8079-e2dd57394b0b.png)
 
-![log in](https://user-images.githubusercontent.com/63204358/196873676-e8d085d3-222f-4049-826b-1c4a97505eab.png) ![sign up](https://user-images.githubusercontent.com/63204358/196873681-6f828336-98f1-4d6f-8b37-1101d6a1599d.png) 
+![log in](https://user-images.githubusercontent.com/63204358/197622479-4f2ad18c-7a02-461a-9b36-1e8690ce9adc.png) ![sign up](https://user-images.githubusercontent.com/63204358/197622499-3c20224a-3045-41fe-914b-5aa8b26cfb34.png) 
 
-![Search](https://user-images.githubusercontent.com/63204358/196873870-5fd186ca-05ee-47f7-a879-3499f1eaa30e.png) ![Home Screen](https://user-images.githubusercontent.com/63204358/196873881-634d6ead-12ac-42b0-84aa-c2eb7735dbe7.png)
+![Search](https://user-images.githubusercontent.com/63204358/197622496-0ce544b1-f00b-4ece-9933-6c20a298ade5.png) !![Home Screen](https://user-images.githubusercontent.com/63204358/197622475-6bad34e5-353b-4463-a2fe-a3b85a73448b.png)
 
-![Product Detail](https://user-images.githubusercontent.com/63204358/196873866-b260ed8a-c6f7-40d3-ad41-ebd477eb241a.png) ![Explore](https://user-images.githubusercontent.com/63204358/196873876-efa042d8-5b58-48e0-8225-33108d805b54.png) 
+![Product Detail](https://user-images.githubusercontent.com/63204358/197622494-7ed56004-8844-44b3-a1be-f8845fcddec7.png) ![Explore](https://user-images.githubusercontent.com/63204358/197622467-0391462d-fee8-4291-a1d9-c28859e14c12.png) 
 
-![Favorites](https://user-images.githubusercontent.com/63204358/196873879-24aae51d-170d-45e9-bb08-0cd2e4edbd26.png) ![My Cart](https://user-images.githubusercontent.com/63204358/196873887-bb0e5daa-4ab5-4c33-ae2d-f077c7b852af.png)
+![Favorites](https://user-images.githubusercontent.com/63204358/197622473-6ed325a2-9d02-4542-9c2a-ff57a6c0327a.png) ![My Cart](https://user-images.githubusercontent.com/63204358/197622483-a03b7a03-c00c-41fc-a3a0-d4577287d87a.png)
 
-![Account](https://user-images.githubusercontent.com/63204358/196873875-3bbb3b4f-241a-4bd9-b5f3-d182187d2927.png)
+![Account](https://user-images.githubusercontent.com/63204358/197622507-d7bdd49e-8f58-4b2a-b4fa-c81a21751d67.png)
 
 
 
